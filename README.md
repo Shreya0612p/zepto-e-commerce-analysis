@@ -1,74 +1,76 @@
 🛒 Zepto E-Commerce Sales & Inventory Analysis
 
 📌 Purpose
-This SQL-based project analyzes Zepto’s messy e-commerce dataset to uncover product performance, inventory patterns, revenue potential, and discount strategies.
-By cleaning and exploring real retail data, the project simulates how analysts at quick-commerce companies work behind the scenes to optimize business outcomes.
+This project uses SQL to study Zepto’s product data. The goal is to find out how products are performing, how much stock is available, where revenue is coming from, and how discounts affect sales.
+By cleaning and analyzing real e-commerce data, the project shows how data analysts help businesses make better decisions.
 
 🛠️ Tech Stack
 
-PostgreSQL / MySQL – For SQL queries and database setup
+PostgreSQL / MySQL → For SQL queries and database setup
 
-SQL Data Cleaning – Removing duplicates, fixing missing values, handling zero pricing
+SQL Data Cleaning → Fixing missing values, duplicates, and wrong prices
 
-Aggregations & Joins – For revenue, stock, and category-level analysis
+Aggregations & Joins → To calculate revenue, stock, and category insights
 
-Conditional Logic – Product segmentation using CASE statements
+CASE Statements → To group products into weight categories
 
-Dataset Format – Raw .csv imported into SQL
+Dataset → Raw .csv file imported into SQL
 
 📂 Data Source
 
-Source: Scraped product inventory dataset from Zepto
+Source: Product inventory dataset collected from Zepto
 
-Key Fields: Product Name, SKU ID, Category, MRP, Discounted Price, Discount %, Quantity, Out-of-Stock Flag, Weight (grams)
+Important Fields: Product Name, SKU ID, Category, MRP, Discounted Price, Discount %, Quantity, Stock Availability, Weight (grams)
 
 💼 Business Problem
 
-Quick-commerce platforms like Zepto must solve several key challenges:
+Zepto, like other quick-delivery companies, faces challenges such as:
 
-Which product categories generate the most revenue?
+Which product categories bring in the most revenue?
 
-How much stock is in inventory vs. out-of-stock?
+How much stock is available, and how much is out of stock?
 
-Which items are mispriced (zero MRP/price)?
+Which products are wrongly priced (zero values)?
 
 Where are the biggest discount opportunities?
 
-How much revenue potential is tied up in current stock?
+How much money is tied up in current stock?
 
 🎯 Analysis Goals
 
-Identify top-performing categories and products
+Find top-performing products and categories
 
-Calculate potential revenue across categories
+Calculate total revenue potential
 
-Highlight high-MRP products that are out of stock
+Identify out-of-stock expensive items
 
-Segment products into Low, Medium, and Bulk by weight
+Group products into Low, Medium, and Bulk weight categories
 
-Perform data cleaning for accurate reporting
+Clean the dataset for accurate results
 
 🔢 Key Results
 
-Using SQL queries, the dataset was cleaned and analyzed:
+After running SQL queries, here’s what we found:
 
-The total potential revenue in inventory is approximately ₹12.47 lakhs.
+Total potential revenue in stock is about ₹12.47 lakhs
 
-The dataset contains around 4,285 SKUs across multiple categories.
+Dataset has around 4,285 unique products (SKUs)
 
-Inventory holds about 62,300 units, with a combined weight of nearly 28,950 kg.
+Total inventory: 62,300 units weighing about 28,950 kg
 
-The average discount offered across products is 18.6%.
+Average discount across all products: 18.6%
 
-Data cleaning removed 152 products with zero pricing values, and flagged over 200 duplicate product names.
+Data cleaning removed 152 wrongly priced products and flagged 200+ duplicate names
 
-📊 Walkthrough of Insights
+📊 Insights
 📈 Revenue Trends
 
-Revenue is dominated by a few categories: Beverages (~36%), Snacks (~26%), and Dairy & Bakery (~17%), together contributing nearly 80% of the total.
-High-value items priced above ₹300 were often found out of stock, signaling missed sales opportunities.
+Most revenue comes from a few categories: Beverages (36%), Snacks (26%), and Dairy & Bakery (17%). Together, they make up almost 80% of sales.
+
+Expensive items (above ₹300) often go out of stock, leading to missed sales opportunities.
 
 📦 Inventory Analysis
 
-Around 85% of products are in stock, while 15% are out of stock.
-Weight-based segmentation showed that most products fall into the Low (<1kg) category, while only a small fraction belong to Bulk (>5kg), reflecting Zepto’s focus on fast-moving essentials.
+About 85% of products are in stock, while 15% are out of stock.
+
+Most items are small packs (<1kg), while only a few belong to the bulk category (>5kg). This matches Zepto’s focus on quick delivery of essentials.
